@@ -1,22 +1,41 @@
 
-
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
   
-  <title>IOTPractitioner</title>
+  <title>Angularjs Notes Series (1) | IOTPractitioner</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="layout: tagstitle: tags">
-<meta property="og:type" content="website">
-<meta property="og:title" content="IOTPractitioner">
-<meta property="og:url" content="http://iotpractitioner.github.com/tags/index.html">
+  <meta name="description" content="setting up the environment
+install the Nodejs
+
+
+install the webserver connect.`npm install connect`
+
+NPM is the node package installer, and it will pull down the files required for the Connect module.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Angularjs Notes Series (1)">
+<meta property="og:url" content="http://iotpractitioner.github.com/2015/06/18/angularnotes-1/index.html">
 <meta property="og:site_name" content="IOTPractitioner">
-<meta property="og:description" content="layout: tagstitle: tags">
-<meta property="og:updated_time" content="2015-06-11T15:15:50.968Z">
+<meta property="og:description" content="setting up the environment
+install the Nodejs
+
+
+install the webserver connect.`npm install connect`
+
+NPM is the node package installer, and it will pull down the files required for the Connect module.">
+<meta property="og:image" content="https://lh3.googleusercontent.com/-ciuS7oFEJns/VYLMlL7mB2I/AAAAAAAAADA/1AdI0lo4D1Q/s0/angularjs.JPG">
+<meta property="og:image" content="https://lh3.googleusercontent.com/--cX6rAOeQVQ/VYLPXVrljOI/AAAAAAAAADQ/XIhpAZMbKR4/s0/angularjs-test.jpg">
+<meta property="og:updated_time" content="2015-06-17T15:30:44.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="IOTPractitioner">
-<meta name="twitter:description" content="layout: tagstitle: tags">
+<meta name="twitter:title" content="Angularjs Notes Series (1)">
+<meta name="twitter:description" content="setting up the environment
+install the Nodejs
+
+
+install the webserver connect.`npm install connect`
+
+NPM is the node package installer, and it will pull down the files required for the Connect module.">
   
     <link rel="alternative" href="/atom.xml" title="IOTPractitioner" type="application/atom+xml">
   
@@ -73,34 +92,99 @@
   </div>
 </header>
     <div class="outer">
-      <section id="main"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+      <section id="main"><article id="post-angularnotes-1" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/tags/index.html" class="article-date">
-  <time datetime="2015-06-11T15:15:50.968Z" itemprop="datePublished">2015-06-11</time>
+    <a href="/2015/06/18/angularnotes-1/" class="article-date">
+  <time datetime="2015-06-18T04:00:00.000Z" itemprop="datePublished">2015-06-18</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/technology/">technology</a>
+  </div>
+
   </div>
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Angularjs Notes Series (1)
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <p>layout: tags<br>title: tags </p>
+        <h2 id="setting_up_the_environment">setting up the environment</h2><ul>
+<li><strong>install the Nodejs</strong></li>
+</ul>
+<ul>
+<li><strong>install the webserver connect.</strong><pre><code>`npm <span class="operator"><span class="keyword">install</span> <span class="keyword">connect</span><span class="string">`</span></span>
+</code></pre><blockquote>
+<p>NPM is the node package installer, and it will pull down the files required for the Connect module. &gt; </p>
+</blockquote>
+</li>
+</ul>
+<ul>
+<li><p><strong>Next, create a new file called server.js*</strong></p>
+<p>  var connect = require(‘connect’),<br>  serveStatic = require(‘serve-static’);<br>  var app = connect();<br>  app.use(serveStatic(“../angularjs”));<br>  app.listen(5000);</p>
+</li>
+<li><p><strong>Installing the Test System </strong></p>
+<p>  npm install -g karma</p>
+</li>
+</ul>
+<ul>
+<li><strong>Create a folder called angularjs at the same level on the disk as the Node.js installation folder</strong></li>
+</ul>
+<ul>
+<li><strong>Download the Angularjs libbary </strong>and put in the folder just created<br><img src="https://lh3.googleusercontent.com/-ciuS7oFEJns/VYLMlL7mB2I/AAAAAAAAADA/1AdI0lo4D1Q/s0/angularjs.JPG" alt="Downlaod the angularjs " title="angularjs.JPG"></li>
+</ul>
+<ul>
+<li><strong>Getting Bootstrap</strong><br>  Go to <a href="http://getbootstrap.com" target="_blank" rel="external">http://getbootstrap.com</a> and click the Download Bootstrap button. You will receive an archive that<br>contains JavaScript and CSS files. Copy the following files into the angularjs folder alongside the angularjs file:<br>bootstrap-3.0.3/dist/css/bootstrap.css<br>bootstrap-3.0.3/dist/css/bootstrap-theme.css</li>
+</ul>
+<ul>
+<li><strong>Performing a Simple Test</strong><br>create a file called test.html</li>
+</ul>
+<ul>
+<li><strong>Starting the Web Server</strong><br>  <code>node server.js</code></li>
+</ul>
+<ul>
+<li><p><strong>Load the Test File in your browser </strong></p>
+<p> <a href="http://localhost:5000/test.html" target="_blank" rel="external"> http://localhost:5000/test.html</a></p>
+</li>
+<li><p><strong>the result should be like this:</strong><br><img src="https://lh3.googleusercontent.com/--cX6rAOeQVQ/VYLPXVrljOI/AAAAAAAAADQ/XIhpAZMbKR4/s0/angularjs-test.jpg" alt="enter image description here" title="angularjs-test.jpg"></p>
+</li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
       
-        <a data-url="http://iotpractitioner.github.com/tags/index.html" data-id="cib0xzwen0000qkz5zqubpc7a" class="article-share-link" data-share="baidu">分享到</a>
+        <a data-url="http://iotpractitioner.github.com/2015/06/18/angularnotes-1/" data-id="cib0xzwhv0007qkz5ro34h0p2" class="article-share-link" data-share="baidu">分享到</a>
       
 
       
 
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Angularjs-Nodejs-javascript/">Angularjs Nodejs javascript</a></li></ul>
+
     </footer>
   </div>
   
     
+<nav id="article-nav">
+  
+  
+    <a href="/2015/06/11/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
   
 </article>
 
@@ -237,4 +321,3 @@
 </div>
 </body>
 </html>
-
